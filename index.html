@@ -3,37 +3,100 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 自分で追加しました -->
+    <title>Product App</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
 　　<!-- vue.js　-->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <link rel="manifest" href="manifest.json">
     <title>PWA Sample</title>
   </head>
   <body>
-    <div id="app">
-        <p>{{ message }}</p>
-        <button v-on:click="reverseMessage">Reverse Message</button>
-     </div>
+
+      <div class="nav-bar">
+      <p>高校受験ナビ</p>
+      </div>
+
+
+      <div id="app">
+        <div class="product">
+          <div class="horizontal-list">
+
+            <div class="item">
+              <img v-bind:src="imageA">
+              <p>岸高生</p>
+            </div>
+
+            <div class="item">
+              <img v-bind:src="imageB">
+              <p>唐津先生</p>
+            </div>
+
+            <div class="item">
+              <img v-bind:src="imageC">
+              <p>黎明館</p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="product-info">
+          <h1>岸和田高校</h1>
+          <h2>I love my {{ product }}</h2>
+          <p>{{ description }}</p>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <input id="faculty" type="radio" name="tab_item" checked>
+        <label class="tab_item" for="faculty">学部</label>
+        <input id="club" type="radio" name="tab_item">
+        <label class="tab_item" for="club">部活</label>
+        <input id="expense" type="radio" name="tab_item">
+        <label class="tab_item" for="expense">学費</label>
+        <input id="event" type="radio" name="tab_item">
+        <label class="tab_item" for="event">行事</label>
+
+        <div class="tab_content" id="faculty_content">
+          <div class="tab_content_description">
+            <p class="c-txtsp">学部の内容がここに入ります</p>
+          </div>
+        </div>
+        <div class="tab_content" id="club_content">
+          <div class="tab_content_description">
+            <p class="c-txtsp">山岳部に入りたまえ^_^</p>
+          </div>
+        </div>
+        <div class="tab_content" id="expense_content">
+          <div class="tab_content_description">
+            <p class="c-txtsp">26万</p>
+          </div>
+        </div>
+        <div class="tab_content" id="event_content">
+          <div class="tab_content_description">
+            <p class="c-txtsp">体育祭</p>
+          </div>
+        </div>
+      </div>
+
+      <h1>PR動画</h1>
+      <div class="youtube">
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/Er_ljI3Er8A" frameborder="0"></iframe>
+      </div>
+
     <script>
     <!-- service workerの登録関係 -->
     if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('service_worker.js').then(function(registration) {
+      navigator.serviceWorker.register('service_worker.js').then(function(registration) {
         console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }).catch(function(err) {
+      }).catch(function(err) {
         console.log('ServiceWorker registration failed: ', err);
-    });
+      });
     }
-    <!-- vue.jsの設定関係 -->
-    var app = new Vue({
-      el: '#app',
-      data: {
-        message: 'Hello Vue!'
-      },
-      methods: {
-        reverseMessage: function () {
-          this.message = this.message.split('').reverse().join('')
-        }
-      }
-    });
     </script>
+    <!-- 浅野が追加しました -->
+    <script src="main.js"></script>
   </body>
 </html>
