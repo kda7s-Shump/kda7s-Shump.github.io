@@ -54,12 +54,13 @@ h1 {
   margin-right: 4%;
 }
 
-.left p{
-  font-size: 1.875rem;
+@media only screen and (min-width:651px) {
+  main p{
+    font-size: 1.875rem;
+  }
 }
 
 .right {
-  font-size: 1.875rem;
   float: left;
   width: 45%;
 }
