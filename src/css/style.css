@@ -1,8 +1,95 @@
 body {
-   font-family: tahoma;
-   color:#282828;
-   margin: 0px;
- }
+  font-family: tahoma;
+  color:#282828;
+}
+
+header {
+  top: 0px;
+  left: 0px;
+  height: 50px;
+}
+
+header img{
+  display: block;
+}
+
+.menu{
+  float: left;
+  background: linear-gradient(-90deg, #84CF6A, #16C0B0);
+  width: 100%;
+  margin-bottom: 1em;
+  line-height: 50px;
+}
+
+.menu li {
+  float: left;
+  list-style: none;
+  padding-left: 4%;
+}
+
+.menu li a{
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+main {
+  clear: both;
+}
+.main_container{
+  width: 95%;
+  margin: 200px 5% 40px 0px;
+}
+
+h1 {
+  border-left: 6px solid #16C0B0;
+  border-bottom: 2px solid #84CF6A;
+}
+
+p {
+  padding-left: 12px;
+}
+
+.left {
+  float: left;
+  width: 30%;
+  margin-bottom: 40px;
+  margin-right: 5%;
+}
+
+.left p{
+  font-size: 30px;
+}
+
+.right {
+  font-size: 30px;
+  float: left;
+  width: 40%;
+}
+
+.article {
+  display: inline-block;
+  width: 22.5%;
+  text-align: center;
+  margin: 1em 0em 0em 1em;
+}
+
+.article p{
+  line-height: 1%;
+  padding-left: 0px;
+}
+
+footer{
+  clear: both;
+  bottom: 0px;
+  background-color: black;
+  line-height: 40px;
+}
+footer p{
+  color: white;
+  text-align: center;
+}
+
+
 
  .nav-bar {
    background: linear-gradient(-90deg, #84CF6A, #16C0B0);
@@ -14,13 +101,6 @@ body {
    display: flex;
    flex-flow: wrap;
    padding: 1rem;
- }
-
- img {
-   border: 1px solid #d8d8d8;
-   width: 70%;
-   margin: 40px;
-   box-shadow: 0px .5px 1px #d8d8d8;
  }
 
  .product-image {
@@ -129,7 +209,6 @@ body {
    text-align: center;
    color: #565656;
    display: inline-block;
-   float: left;
    text-align: center;
    font-weight: bold;
    transition: all 0.2s ease;

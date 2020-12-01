@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="src/css/style.css">
     <link rel="manifest" href="manifest.json">
 
     <link rel="manifest" href="manifest.webmanifest"/>
@@ -12,94 +12,109 @@
           integrity="sha384-VcI6S+HIsE80FVM1jgbd6WDFhzKYA0PecD/LcIyMQpT4fMJdijBh0I7Iblaacawc"
           crossorigin="anonymous"></script>
 
-    <title>Product App</title>
+    <title>Portfolio</title>
   </head>
   <body>
-
-      <div class="nav-bar">
-      <p>高校受験ナビ</p>
-      </div>
-
-
-      <div id="app">
-        <div class="product">
-          <div class="horizontal-list">
-
-            <div class="item">
-              <img v-bind:src="imageA">
-              <p>岸高生</p>
-            </div>
-
-            <div class="item">
-              <img v-bind:src="imageB">
-              <p>唐津先生</p>
-            </div>
-
-            <div class="item">
-              <img v-bind:src="imageC">
-              <p>黎明館</p>
-            </div>
-
-          </div>
+    <header>
+      <a href="#"><img src="src/img/logo.png" alt="logo"></a>
+      <ul class="menu">
+        <li><a href="#">profile</a></li>
+        <li><a href="#">intern</a></li>
+        <li><a href="#">study</a></li>
+        <li><a href="#">product</a></li>
+        <li><a href="#">contact</a></li>
+      </ul>
+    </header>
+  
+    <main>
+      <div class="main-container">
+        <div class="left">
+          <img src="src/img/me.jpg" margin-left="20px" width="100%">
+          <h1>クライミングを愛してやまない</h1>
         </div>
-
-        <div class="product-info">
-          <h1>岸和田高校</h1>
-          <h2>I love my {{ product }}</h2>
-          <p>{{ description }}</p>
+        <div class="right">
+          <p>大阪府立大学大学院 人間社会システム科学研究科<br>現代システム科学専攻 知識情報システム学分野 M1</p>
+          <p>大学ではコンピュータ科学を学んでいます。</p>
+          <p>知的信号処理研究室(柳本研究室)において<br>・深層学習による文章からの画像生成<br>・サンゴ礁のセグメンテーション<br>に励んでおります。</p>
+          <p><img src="src/img/climbing_A.JPG" width="80%"></p>
         </div>
-      </div>
-
-      <div class="tabs">
-        <input id="faculty" type="radio" name="tab_item" checked>
-        <label class="tab_item" for="faculty">学部</label>
-        <input id="club" type="radio" name="tab_item">
-        <label class="tab_item" for="club">部活</label>
-        <input id="expense" type="radio" name="tab_item">
-        <label class="tab_item" for="expense">学費</label>
-        <input id="event" type="radio" name="tab_item">
-        <label class="tab_item" for="event">行事</label>
-
-        <div class="tab_content" id="faculty_content">
-          <div class="tab_content_description">
-            <p class="c-txtsp">学部の内容がここに入ります</p>
-          </div>
+  
+        <div class="article">
+          <a href="#"><img src="src/img/pic1.jpg"></a>
+          <p>ドメインの取得方法</p>
         </div>
-        <div class="tab_content" id="club_content">
-          <div class="tab_content_description">
-            <p class="c-txtsp">山岳部に入りたまえ^_^</p>
-          </div>
+        <div class="article">
+          <a href="#"><img src="src/img/pic2.jpg"></a>
+          <p>快適な職場環境</p>
         </div>
-        <div class="tab_content" id="expense_content">
-          <div class="tab_content_description">
-            <p class="c-txtsp">26万</p>
-          </div>
+        <div class="article">
+          <a href="#"><img src="src/img/pic3.jpg"></a>
+          <p>Linuxの基礎</p>
         </div>
-        <div class="tab_content" id="event_content">
-          <div class="tab_content_description">
-            <p class="c-txtsp">体育祭</p>
-          </div>
+        <div class="article">
+          <a href="#"><img src="src/img/pic4.jpg"></a>
+          <p>マーケティング入門</p>
+        </div>
+        <div class="article">
+          <a href="#"><img src="src/img/pic5.jpg"></a>
+          <p>アクティブラーニング</p>
+        </div>
+        <div class="article">
+          <a href="#"><img src="src/img/pic6.jpg"></a>
+          <p>CSSの効率的な勉強方法</p>
+        </div>
+        <div class="article">
+          <a href="#"><img src="src/img/pic7.jpg"></a>
+          <p>リーダブルコードとは</p>
+        </div>
+        <div class="article">
+          <a href="#"><img src="src/img/pic8.jpg"></a>
+          <p>HTML5の可能性</p>
         </div>
       </div>
+    </main>
+  
+    <footer>
+      <p>2020年12月1日 作成</p>
+    </footer>
 
-      <h1>PR動画</h1>
-      <div class="youtube">
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/Er_ljI3Er8A" frameborder="0"></iframe>
+    <div class="tabs">
+      <input id="faculty" type="radio" name="tab_item" checked>
+      <label class="tab_item" for="faculty">学部</label>
+      <input id="club" type="radio" name="tab_item">
+      <label class="tab_item" for="club">部活</label>
+      <input id="expense" type="radio" name="tab_item">
+      <label class="tab_item" for="expense">学費</label>
+      <input id="event" type="radio" name="tab_item">
+      <label class="tab_item" for="event">行事</label>
+
+      <div class="tab_content" id="faculty_content">
+        <div class="tab_content_description">
+          <p class="c-txtsp">学部の内容がここに入ります</p>
+        </div>
       </div>
+      <div class="tab_content" id="club_content">
+        <div class="tab_content_description">
+          <p class="c-txtsp">山岳部に入りたまえ^_^</p>
+        </div>
+      </div>
+      <div class="tab_content" id="expense_content">
+        <div class="tab_content_description">
+          <p class="c-txtsp">26万</p>
+        </div>
+      </div>
+      <div class="tab_content" id="event_content">
+        <div class="tab_content_description">
+          <p class="c-txtsp">体育祭</p>
+        </div>
+      </div>
+    </div>
 
-    <script>
-    <!-- service workerの登録関係 -->
-    if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('service_worker.js').then(function(registration) {
-        console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }).catch(function(err) {
-        console.log('ServiceWorker registration failed: ', err);
-    });
-    }
+    <h1>PR動画</h1>
+    <div class="youtube">
+      <iframe width="640" height="360" src="https://www.youtube.com/embed/Er_ljI3Er8A" frameborder="0"></iframe>
+    </div>
 
-    </script>
-    <!-- 浅野が追加しました -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script src="https://github.com/kda7s-Shump/kda7s-Shump.github.io/blob/example/main.js"></script>
   </body>
 </html>
