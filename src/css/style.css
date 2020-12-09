@@ -54,12 +54,19 @@ h1 {
   margin-right: 4%;
 }
 
+main a{
+  display: flexbox;
+  margin: 0 2rem;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding-bottom: 1rem;
+}
 main h1{
   font-size:1.05rem;
 }
 @media only screen and (min-width:651px) {
   main p{
-    font-size: 1.875rem;
+    font-size: 1.7rem;
   }
   main h1{
     font-size: 2rem;
