@@ -1,3 +1,5 @@
+
+
 body {
   font-family: tahoma;
   color:#282828;
@@ -48,7 +50,7 @@ h1 {
 
 .left {
   float: left;
-  width: 40%;
+  width: 60%;
   margin-bottom: 40px;
   margin-left: 1%;
   margin-right: 4%;
