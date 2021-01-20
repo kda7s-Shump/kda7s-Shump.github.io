@@ -1,38 +1,23 @@
-@font-face{
-  font-family: 'Schumpeter';
-  src: url(https://fonts.gstatic.com/s/raleway/v14/1Ptug8zYS_SKggPNyC0IT4ttDfA.woff2) format("woff2");
-}
-
-*{
-  color: #363636;
-  font-family: 'Schumpeter';
-  list-style: none;
-}
-
-p{
-  margin: 0 -1em;
-}
-
 .font{
-  letter-spacing: 0.1em;
+  letter-spacing: .1em;
   text-align: center;
 }
 
-.font_0{
+.font-0{
   font-size: 20px;
 }
 
-.font_1{
+.font-1{
   font-size: 80px;
   margin-bottom: 10%;
 }
 
-.font_2{
+.font-2{
   border-bottom: solid 3px #cef7e0;
   color: #2e5740;
   font-size: 33px;
   text-align: left;
-  letter-spacing: 0.2em;
+  letter-spacing: .2em;
   margin-left: 1em;
   width: 100% - 1em;
 }
@@ -52,10 +37,10 @@ nav ul {
   width: 100%;
 }
 
-nav ul li img {
+nav img {
   height: 50px;
 }
-nav ul li a:hover {
+nav a:hover {
   text-shadow: 0 0 10px #7ec790;
 }
 

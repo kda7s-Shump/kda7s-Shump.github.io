@@ -1,58 +1,34 @@
-<!--  メインカラー：#cef7e0
-      サブカラー：#2e5740
-      アクセントカラー：#e6bbd3 -->
-
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
-  <link rel="stylesheet" href="src/css/morning.css">
-  <link rel="icon" sizes="120x120" href="src/img/favicon.png">
-  <link rel="apple-touch-icon" href="src/img/favicon.png" type="image/png">
-  
+  <!--<link rel="stylesheet" href="src/css/morning.css">-->
+  <link href="src/css/style.css" rel="stylesheet" >
+  <link href="src/img/favicon.ico" rel="icon" sizes="120x120" >
+  <link href="src/img/favicon.ico" rel="apple-touch-icon"  type="image/png">
+
   <meta charset="UTF-8">
   <meta name="author" content="Schnja Asano">
-  <meta name="discription"
-    content="「Schumpeterの旅する経済学」著者, 浅野竣弥の半生を振り返ったポートフォリオサイト。
+  <meta name="discription" content="「Schumpeterの旅する経済学」著者, 浅野竣弥の半生を振り返ったポートフォリオサイト。
               あなたも必ず伝道に成功します。This is the portfolio site of Shunya Asano,
               author of `Schumpeter's Traveling Economics`, looking back on his life.
               You will surely succeed in evangelism.">
   <meta name="keywords" content="portfolio">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <meta property="og:title" content="Schnja Asano's portfolio" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://kda7s-shump.github.io/index.html" />
-  <meta property="og:image" content="https://github.com/kda7s-Shump/kda7s-Shump.github.io/blob/example/src/img/me.jpg" />
+  <meta property="og:image"
+    content="https://github.com/kda7s-Shump/kda7s-Shump.github.io/blob/example/src/img/me.jpg" />
   <meta property="og:site_name" content="Do you know Schunya Asano?" />
-  <meta property="og:description"
-    content="「Schumpeterの旅する経済学」著者, 浅野竣弥の半生を振り返ったポートフォリオサイト。
+  <meta property="og:description" content="「Schumpeterの旅する経済学」著者, 浅野竣弥の半生を振り返ったポートフォリオサイト。
               あなたも必ず伝道に成功します。This is the portfolio site of Shunya Asano,
               author of `Schumpeter's Traveling Economics`, looking back on his life.
               You will surely succeed in evangelism." />
-  
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
   <script src="src/js/p5.min.js"></script>
   <script src="src/js/sketch.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
-  
-  <!-- スムーズスクロール部分の記述 -->
-  <script>
-    $(function () {
-      // #で始まるアンカーをクリックした場合に処理
-      $('a[href^=#]').click(function () {
-        // スクロールの速度
-        var speed = 400; // ミリ秒
-        // アンカーの値取得
-        var href = $(this).attr("href");
-        // 移動先を取得
-        var target = $(href == "#" || href == "" ? 'html' : href);
-        // 移動先を数値で取得
-        var position = target.offset().top;
-        // スムーススクロール
-        $('body,html').animate({ scrollTop: position }, speed, 'swing');
-        return false;
-      });
-    });
-  </script>
 
   <title>Schnya Penguin</title>
 </head>
@@ -60,43 +36,32 @@
 <body>
   <header>
     <div id="Top">
-      <h1 class="font font_0">Shunya Asano</h1>
+      <h1 class="font font-S">Shunya Asano</h1>
     </div>
-    
-    <div id="canvas">
-      <nav>
-        <ul>
-          <li>
-            <a href="#Top">Top</a>
-          </li>
-          <li>
-            <a href="#About">About</a>
-          </li>
-          <li>
-            <a href="#Expertise">Expertise</a>
-          <li>
-            <a href="#Projects">Projects</a>
-          </li>
-          <li>
-            <a href="#Note">Note</a>
-          </li>
-          <li>
-            <a href="#Contact">Contact</a>
-          </li>
-          <li>
-            <img src="src/img/favicon.png" alt="img/png">
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <h1 class="font font_1">PORTFOLIO SITE</h1>
   </header>
 
+  <nav>
+    <ul>
+      <li><a href="#Top">Top</a></li>
+      <li><a href="#About">About</a></li>
+      <li><a href="#Expertise">Expertise</a></li>
+      <li><a href="#Projects">Projects</a></li>
+      <li><a href="#Note">Note</a></li>
+      <li><a href="#Contact">Contact</a></li>
+      <li><img src="src/img/favicon.png" alt="img/png"></li>
+    </ul>
+  </nav>
+
+  <div id="canvas"></div>
+  <h1 class="font font-L">PORTFOLIO SITE</h1>
+
   <section id="About">
-    <h1 class="font font_2">About</h1>
+    <h1 class="font font-M">About</h1>
+
     <div class="left">
       <img src="src/img/me.jpg">
     </div>
+
     <div class="right">
       <h2>浅野　竣弥</h2>
       <h3>大阪府立大学大学院 人間社会システム科学研究科</h3>
@@ -113,14 +78,20 @@
         <li class="en">　Extraction of Live Corals from Seafloor Image Data Using Semantic Segmentation</li>
       </ul>
     </div>
+
   </section>
 
   <section id="Expertise">
-    <h1 class="font font_2">Expertise</h1>
+    <h1 class="font font-M">Expertise</h1>
+
     <div class="left">
       <h2>Programming</h2>
-      <p>HTML5/CSS3/JavaScript(jQeury/p5.js/Vue.js), Java, MySQL, PHP, Processing, Python3, pytorch</p>
+      <p>HTML5/CSS3/JavaScript(jQeury/Vue.js), Java, MySQL, PHP, Processing(p5.js), Python3(pytorch)</p>
+
+      <h2>Key typing</h2>
+      <p>8.0key/sec</p>
     </div>
+
     <div class="right">
       <h2>Deep Learning(Machine Learning)</h2>
       <ul>
@@ -130,10 +101,11 @@
         <li class="en">Semantic Image Segmentation</li>
       </ul>
     </div>
+
   </section>
 
   <section id="Projects">
-    <h1 class="font font_2">Projects</h1>
+    <h1 class="font font-M">Projects</h1>
     <div class="projects">
       <img src="src/img/projects/portfolio.jpg" alt="img/jpg">
       <h2>Web Design</h2>
@@ -156,58 +128,77 @@
     <div class="projects">
       <img src="src/img/projects/卒論.png" alt="img/png">
       <h2>thesis</h2>
-      <p>本研究では, テキストと生成された画像間に意味的な整合性を持つかどうか検討する.
-        整合性を検討する為, 具体性のあるテキスト, 例えば個数について言及するものや,
+      <p>本研究では, テキストと生成された画像間に意味的な整合性を持つかどうか検討する. 整合性を検討する為, 具体性のあるテキスト, 例えば個数について言及するものや,
         空間的位置関係などが記述されたテキストに沿った画像を訓練データとして用いる.
       </p>
     </div>
   </section>
 
   <section id="Note">
-    <h1 class="font font_2">Note</h1>
-      <div style="text-align: center; width: 50%; margin: auto 25%;">
-        <h2>クライミングで培った『物事を多角的に捉える力』</h2>
-        <p>クライミングはゴールだけが設定されており、
-          それまでの過程は一意に決められていません。
-          そのため、ゴールへの糸口を様々な角度から考える力が養われます。
-          1つの(偏った)情報だけで、物事を分かった気にならないよう異なるソースから情報を集めるよう普段から努めています。
-          ちなみに SPORT CLIMBING JAPAN TOUR 2019 の RANKING に載るほどクライミングにのめり込みました✨</p>
-          <img src="src/img/result.png" alt="img/png" style="width: 50%;">
-      </div>
-  </section>
+    <h1 class="font font-M">Note</h1>
+    <div class="left">
+      <h2>クライミングで培った『物事を多角的に捉える力』</h2>
+      <p>クライミングはゴールだけが設定されており、 それまでの過程は一意に決められていません。 そのため、ゴールへの糸口を様々な角度から考える力が養われます。
+        1つの(偏った)情報だけで、物事を分かった気にならないよう異なるソースから情報を集めるよう普段から努めています。 ちなみに SPORT CLIMBING JAPAN TOUR 2019 の RANKING
+        に載るほどクライミングにのめり込みました✨
+      </p>
 
-  <section id="Contact" style="text-align: center;">
-    <h1 class="font font_2">Contact</h1>
-    <p>各種発信行っております。</p>
-    <a href="https://twitter.com/A9qoxC" style="color:#1ca4f4;">
-      <img src="src/icon/Twitter_Social_Icon_Rounded_Square_Color.png" style="width:3rem;">@A9qoxC
-    </a>
-    <a href="https://www.instagram.com/shum_p_shum/" style="color:#6154ca;">
-      <img src="src/icon/480px-Instagram_icon.png" style="width: 3rem;">@shum_p_shum
-    </a>
-    <a href="https://note.com/kda7sshump/" style="color:#44ccb4;">
-      <img src="src/icon/logo_symbol.png" style="width:3rem;">しゅんや
-    </a>
-    <a href="https://github.com/kda7s-Shump/" style="color:#000000;">
-      <img src="src/icon/GitHub-Mark-120px-plus.png" style="width:3rem;">kda7s-Shump
-    </a>
-    <div class="gridR">
-      <div class="col col-body">
-        <div class="contents">
-          <div class="contents-body">
-            <div class="sample">
-              <div class="mail-box">
-                <div class="box-title">お仕事の依頼はこちらまで</div>
-                <p><a href="mailto:kda7s-shump@gmail.com">kda7s-Shump@gmail.com</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    </div>
+    <div class="right">
+      <img src="src/img/result.png" alt="img/png">
     </div>
   </section>
 
+  <section id="Contact" style="text-align: center;">
+    <h1 class="font font-M">Contact</h1>
+
+    <div class="mail-box">
+      <div class="contents">
+        <div class="title">お仕事の依頼はこちらまで</div>
+        <div class="font font-S">
+          <p><a href="mailto:kda7sshump.aur@gmail.com">kda7sshump.aur@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+
+    <ul>
+      <li>
+        <a href="https://twitter.com/A9qoxC" style="color:#1ca4f4;">
+          <img src="src/icon/Twitter_Social_Icon_Rounded_Square_Color.png">@A9qoxC
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/shum_p_shum/" style="color:#6154ca;">
+          <img src="src/icon/480px-Instagram_icon.png">@shum_p_shum
+        </a>
+      </li>
+      <li>
+        <a href="https://note.com/kda7sshump/" style="color:#44ccb4;">
+          <img src="src/icon/logo_symbol.png">
+          <p style="color: #44ccb4;">しゅんや</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/kda7s-Shump/" style="color:#000000;">
+          <img src="src/icon/GitHub-Mark-120px-plus.png">
+          <p>kda7s-Shump</p>
+        </a>
+      </li>
+    </ul>
+
+
+  </section>
+
   <footer>
+    <ul>
+      <li><img src="src/img/favicon.png" alt="img/png"></li>
+      <li><a href="#Top">Top</a></li>
+      <li><a href="#About">About</a></li>
+      <li><a href="#Expertise">Expertise</a></li>
+      <li><a href="#Projects">Projects</a></li>
+      <li><a href="#Note">Note</a></li>
+      <li class="hidden"><a href="#Contact">Contact</a></li>
+    </ul>
     <p>@2021 Shunya Asano</p>
   </footer>
 

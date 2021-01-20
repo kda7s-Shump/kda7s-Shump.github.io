@@ -1,92 +1,61 @@
+@import url(style-mobile.css);
+@import url(style-pc.css);
+@font-face {
+    font-family: 'Schumpeter';
+    src: url(https://fonts.gstatic.com/s/raleway/v14/1Ptug8zYS_SKggPNyC0IT4ttDfA.woff2) format("woff2");
+}
 
+:root {
+    --main-color: #cef7e0;
+    --main-color-dark: #aed7c0;
+    --sub-color: #2e5740;
+    --sub-color-light: #7ec790;
+    --accent-color: #e6bbd3;
+}
+
+* {
+    color: #363636;
+    font-family: 'Schumpeter';
+    list-style: none;
+}
+
+html {
+    font-size: 16px;
+}
 
 body {
-  font-family: tahoma;
-  color:#282828;
+    -webkit-text-size-adjust: 100%;
 }
 
-header {
-  top: 0px;
-  left: 0px;
-  height: 50px;
+.font {
+    letter-spacing: .1em;
+    text-align: center;
 }
 
-header img{
-  display: block;
-}
-
-.menu{
-  float: left;
-  background: linear-gradient(-90deg, #84CF6A, #16C0B0);
-  width: 100%;
-  margin-bottom: 1em;
-  line-height: 50px;
-}
-
-.menu li {
-  float: left;
-  list-style: none;
-  padding-left: 4%;
-}
-
-.menu li a{
-  text-decoration: none;
-  color: whitesmoke;
-}
-
-main {
-  clear: both;
-}
-.main_container{
-  width: 96%;
-  margin: 200px 3% 40px 3%;
-}
-
-h1 {
-  padding-left: 12px;
-  border-left: 6px solid #16C0B0;
-  border-bottom: 2px solid #84CF6A;
-}
-
-.left {
-  float: left;
-  width: 60%;
-  margin-bottom: 40px;
-  margin-left: 1%;
-  margin-right: 4%;
-}
-
-main a{
-  display: flexbox;
-  margin: 0 2rem;
-  text-decoration: none;
-  font-size: 1.1rem;
-  padding-bottom: 1rem;
-}
-main h1{
-  font-size:1.05rem;
-}
-@media only screen and (min-width:651px) {
-  main p{
-    font-size: 1.7rem;
-  }
-  main h1{
-    font-size: 2rem;
-  }
-}
-
-.right {
-  float: left;
-  width: 45%;
+.font-M {
+    border-bottom: solid 3px var(--main-color);
+    color: var(--sub-color);
+    text-align: left;
+    letter-spacing: .2em;
+    width: 95vw;
 }
 
 footer{
-  clear: both;
-  bottom: 0px;
-  background-color: black;
-  line-height: 40px;
-}
-footer p{
+  background: var(--main-color-dark);
   color: white;
+  bottom: 0;
+  height: 5%;
+}
+
+footer ul {
+  align-items: center;
+  width: 100%;
+  display: flex;
+  height: 50px;
+  justify-content: space-evenly;
+  }
+
+footer p{
   text-align: center;
+  padding: 1rem;
 }
