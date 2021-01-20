@@ -1,165 +1,61 @@
-$main-color: #cef7e0;
-$main-color_dark: #aed7c0;
-$sub-color:  #2e5740;
-$sub-color_light: #7ec790;
-$accent-color: #e6bbd3;
-
-@font-face{
+@import url(style-mobile.css);
+@import url(style-pc.css);
+@font-face {
   font-family: 'Schumpeter';
   src: url(https://fonts.gstatic.com/s/raleway/v14/1Ptug8zYS_SKggPNyC0IT4ttDfA.woff2) format("woff2");
 }
 
-*{
+:root {
+  --main-color: #cef7e0;
+  --main-color-dark: #aed7c0;
+  --sub-color: #2e5740;
+  --sub-color-light: #7ec790;
+  --accent-color: #e6abc3;
+}
+
+* {
   color: #363636;
   font-family: 'Schumpeter';
   list-style: none;
 }
 
-p{
-  margin: 0 -1em;
+html {
+  font-size: 16px;
 }
 
-.font{
-  letter-spacing: 0.1em;
+body {
+  -webkit-text-size-adjust: 100%;
+}
+
+.font {
+  letter-spacing: .1em;
   text-align: center;
 }
 
-.font_0{
-  font-size: 20px;
+.font-M {
+    border-bottom: solid 3px var(--main-color);
+    color: var(--sub-color);
+    text-align: left;
+    letter-spacing: .2em;
+    width: 95vw;
 }
 
-.font_1{
-  font-size: 80px;
-  margin-bottom: 10%;
-}
+footer{
+  background: var(--main-color-dark);
+  color: white;
+  bottom: 0;
+  height: 5%;
 
-.font_2{
-  border-bottom: solid 3px $main-color;
-  color: $sub-color;
-  font-size: 33px;
-  text-align: left;
-  letter-spacing: 0.2em;
-  margin-left: 1em;
-  width: 100% - 1em;
-}
-
-nav {
-  background: rgba(255, 255, 255, 0.75);
-  width: 100%;
-  position: fixed;
-  
-  ul {
+  ul{
     align-items: center;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 5px 0;
     width: 100%;
-    
-    li {
-
-      a:hover {
-        text-shadow: 0 0 10px $main-color;
-      }
-
-      img {
-      height: 50px;
-      }
-    }
+    display: flex;
+    height: 50px;
+    justify-content: space-evenly;
   }
-
-}
-
-section{
-  clear: both;
-  margin-bottom: 10%;
-}
-
-.left{
-  float: left;
-  width: 50%;
-  padding-left: 5%;
-
-  img{
-    width: 90%;
-  }
-}
-
-.right{
-  h3, p{
-    margin: 0 -1em;
-  }
-
-  img {
-    width: auto;
-    height: 100%;
-  }
-
-  .en{
-    font-size: 6px;
-    margin-bottom: 6px;
-  }
-}
-.projects{
-  float: left;
-  padding: 5% 0 0 5%;
-  text-align: center;
-  width: 33%;
-
-  img{
-    width: 25vw;
-  }
-}
-
-.gridR {
-  padding-top: 20px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 70%;
-      grid-template-rows: 70%;
-  -ms-grid-columns: 10% 55% 25% 10%;
-      grid-template-columns: 10% 55% 25% 10%;
-      grid-template-areas: "leftSide body title rightSide";
   
-  .col-body{
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    grid-area: body;
-    padding-right: 25px;
-  }
-}
-
-#Contact{
-
-  .contents {
-    background: $main-color;
-    -webkit-box-shadow: 20px 20px $sub-color_light;
-            box-shadow: 20px 20px $sub-color_light;
-  }
-  .contents-body{
+  p{
     text-align: center;
-
-    .mail-box{
-      background: $main-color_dark;
-      margin: 1vw;
-      margin-bottom: 1.8vw;
-    }
+    padding: 1rem;
   }
-}
-
-#Contact .contents .contents-body .mail-box .box-title {
-  font-size: 1.4em;
-  background: $main-color;
-  padding: 4px;
-  color: $sub-color;
-  font-weight: bold;
-  letter-spacing: 0.05em;
-}
-
-#Contact .contents .contents-body .mail-box p {
-  padding: 1.5vw;
-  font-size: 2em;
-}
-
-#Contact .contents .contents-body .mail-box p a {
-  font-size: 2vw;
 }

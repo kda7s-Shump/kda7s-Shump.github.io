@@ -3,28 +3,26 @@
 
 <head>
   <!--<link rel="stylesheet" href="src/css/morning.css">-->
-  <link href="src/css/style.css" rel="stylesheet" >
-  <link href="src/img/favicon.ico" rel="icon" sizes="120x120" >
-  <link href="src/img/favicon.ico" rel="apple-touch-icon"  type="image/png">
+  <link href="src/css/style.css" rel="stylesheet">
+  <link href="src/img/favicon.ico" rel="icon" sizes="120x120">
+  <link href="src/img/favicon.ico" rel="apple-touch-icon" type="image/png">
 
   <meta charset="UTF-8">
-  <meta name="author" content="Schnja Asano">
+  <meta name="author" content="Schnya Asano">
   <meta name="discription" content="「Schumpeterの旅する経済学」著者, 浅野竣弥の半生を振り返ったポートフォリオサイト。
-              あなたも必ず伝道に成功します。This is the portfolio site of Shunya Asano,
-              author of `Schumpeter's Traveling Economics`, looking back on his life.
-              You will surely succeed in evangelism.">
+              This is the portfolio site of Shunya Asano, author of `Schumpeter's Traveling Economics`,
+              looking back on his life.">
   <meta name="keywords" content="portfolio">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <meta property="og:title" content="Schnja Asano's portfolio" />
+  <meta property="og:title" content="Schnya Asano's portfolio" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://kda7s-shump.github.io/index.html" />
   <meta property="og:image"
     content="https://github.com/kda7s-Shump/kda7s-Shump.github.io/blob/example/src/img/me.jpg" />
   <meta property="og:site_name" content="Do you know Schunya Asano?" />
   <meta property="og:description" content="「Schumpeterの旅する経済学」著者, 浅野竣弥の半生を振り返ったポートフォリオサイト。
-              あなたも必ず伝道に成功します。This is the portfolio site of Shunya Asano,
-              author of `Schumpeter's Traveling Economics`, looking back on his life.
-              You will surely succeed in evangelism." />
+              This is the portfolio site of Shunya Asano, author of `Schumpeter's Traveling Economics`,
+              looking back on his life." />
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
   <script src="src/js/p5.min.js"></script>
@@ -39,6 +37,30 @@
       <h1 class="font font-S">Shunya Asano</h1>
     </div>
   </header>
+
+  <div id="app">
+    <div v-bind:class="{ active: isOpen }">
+      <div id="overlay" v-bind:class="{ active: isOpen }" @click="isOpen=!isOpen"></div>
+      <div id="menu">
+        <div class="inner">
+          <ul>
+            <li><a href="#Top">Top</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Expertise">Expertise</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Note">Note</a></li>
+            <li><a href="#Contact">Contact</a></li>
+            <li><img src="src/img/favicon.png" alt="img/png"></li>
+          </ul>
+        </div>
+      </div>
+      <p class="btn" @click="isOpen=!isOpen">
+        <span></span>
+        <span></span>
+        <span></span>
+      </p>
+    </div>
+  </div>
 
   <nav>
     <ul>
@@ -93,7 +115,7 @@
     </div>
 
     <div class="right">
-      <h2>Deep Learning(Machine Learning)</h2>
+      <h2>Deep Learning</h2>
       <ul>
         <li>敵対的生成ネットワーク</li>
         <li class="en">Generative Adversarial Network</li>
@@ -109,7 +131,8 @@
     <div class="projects">
       <img src="src/img/projects/portfolio.jpg" alt="img/jpg">
       <h2>Web Design</h2>
-      <p>当サイトのデザインとp5.jsを導入しました.</p>
+      <p>言語: HTML/CSS/Vue.js/p5.js</p>
+      <p>responsive design を導入しています.</p>
     </div>
 
     <div class="projects">
@@ -202,6 +225,14 @@
     <p>@2021 Shunya Asano</p>
   </footer>
 
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        isOpen: false,
+      },
+    })
+  </script>
 </body>
 
 </html>

@@ -1,111 +1,209 @@
 @media screen and (max-width: 767px) {
   p {
-    margin: 0 .1rem;
+    margin: 0 0.1rem;
   }
   .font-S {
-    font-size: calc(100vw/24);
+    font-size: calc(100vw / 24);
+    margin-bottom: 2.1rem;
   }
   .font-M {
     font-size: 2rem;
   }
   .font-L {
-    font-size: calc(100vw/10);
+    font-size: calc(9vw);
     margin-bottom: 10%;
   }
-  nav {
-    align-items: center;
-    background: rgba(255, 255, 255, 0.75);
-    position: fixed;
-    width: 100%;
-  }
-  
-  nav ul {
-      height: 50px;
-      justify-content: space-evenly;
-  }
-  nav img {
-      visibility: hidden;
-  }
-  nav a:hover {
-      text-shadow: 0 0 1rem var(--sub-color-light);
-  }
-  section {
-      clear: both;
-      margin-bottom: 10%;
-  }
-  .left img {
-      width: 100vw;
+
+  #app {
+    height: 0;
+    width: 100vw;
   }
 
-  .right h3{
+  #menu {
+    background-color: rgba(206, 247, 224, 0.671);
+    height: 60rem;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: width 1s;
+    width: 0;
+    z-index: 70;
+  }
+  .active #menu {
+    width: 10rem;
+  }
+
+  .inner {
+    color: #e6abc3;
+    padding-top: 3rem;
+    width: 10rem;
+    
+  }
+  .inner li {
+    margin: 2rem auto;
+  }
+
+  .inner a {
+    color: var(--accent-color);
+  }
+
+  .inner img{
+    width: 50%;
+  }
+
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    width: 0;
+    height: 100%;
+    background-color: rgba(200, 200, 200, 0.2);
+    opacity: 0;
+    transition: opacity 1s, width 0s 1s, height 0s 1s;
+  }
+  .active #overlay {
+    width: 100%;
+    opacity: 0.7;
+    transition: opacity 1s, width 0s 0s, height 0s 0s;
+  }
+
+  /*ハンバーガーメニューのボタン*/
+  .btn,
+  .btn span {
+    box-sizing: border-box;
+    display: inline-block;
+    transition: all 0.4s;
+  }
+
+  .btn {
+    position: fixed;
+    z-index: 100;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 20px;
+  }
+
+  .btn span {
+    background-color: var(--accent-color);
+    height: 0.2rem;
+    position: absolute;
+    right: 1rem;
+    width: 2rem;
+  }
+
+  .btn span:nth-of-type(1) {
+    top: 1rem;
+  }
+
+  .btn span:nth-of-type(2) {
+    top: 2rem;
+  }
+
+  .btn span:nth-of-type(3) {
+    top: 3rem;
+  }
+
+  .active .btn span:nth-of-type(1) {
+    -webkit-transform: translateY(8px) rotate(-45deg);
+        -ms-transform: translateY(8px) rotate(-45deg);
+            transform: translateY(8px) rotate(-45deg);
+  }
+
+  .active .btn span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .active .btn span:nth-of-type(3) {
+    -webkit-transform: translateY(-8px) rotate(45deg);
+        -ms-transform: translateY(-8px) rotate(45deg);
+            transform: translateY(-8px) rotate(45deg);
+  }
+
+  nav {
+    display: none;
+  }
+
+  section {
+    clear: both;
+    margin-bottom: 10%;
+  }
+
+  .left img {
+    width: 100vw;
+  }
+
+  .right h3 {
     font-size: 4vw;
   }
   .right .en {
     font-size: 6px;
     margin-bottom: 6px;
   }
-  .right img{
+  .right img {
     width: 80vw;
   }
 
   .projects {
-      float: left;
-      padding: 5% 0 0 5vw;
-      text-align: center;
+    float: left;
+    padding: 5% 0 0 5vw;
+    text-align: center;
   }
   .projects img {
-      width: 90vw;
+    width: 90vw;
   }
 
-  #Note{
+  #Note {
     float: left;
     padding: 5% 0 0 5vw;
     text-align: center;
     width: 90%;
   }
   #Contact .mail-box {
-      background: var(--main-color);
-      box-shadow: 10px 15px var(--sub-color);
-      margin: 0 5%;
-      padding: 20px 0;
-      text-align: center;
+    background: var(--main-color);
+    box-shadow: 10px 15px var(--sub-color);
+    margin: 0 5%;
+    padding: 20px 0;
+    text-align: center;
   }
   #Contact .mail-box .contents {
-      background: var(--main-color-dark);
+    background: var(--main-color-dark);
   }
   #Contact .mail-box .contents .title {
-      background: var(--main-color);
-      color: var(--sub-color);
-      font-size: 1.4em;
-      font-weight: bold;
-      letter-spacing: 0.05em;
-      padding: 4px;
+    background: var(--main-color);
+    color: var(--sub-color);
+    font-size: 1.4em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    padding: 4px;
   }
   #Contact .mail-box .contents p {
-      padding: 1.5vw;
+    padding: 1.5vw;
   }
   #Contact .mail-box .contents p a:hover {
-      color: var(--accent-color);
+    color: var(--accent-color);
   }
   #Contact ul {
-      display: flex;
-      height: 5rem;
-      justify-content: space-evenly;
-      margin: 2rem 0 5rem -2.5rem;
+    display: flex;
+    height: 5rem;
+    justify-content: space-evenly;
+    margin: 2rem 0 5rem -2.5rem;
   }
-  #Contact li{
+  #Contact li {
     margin: 1rem 0;
   }
 
   #Contact img {
-      margin-top: 1rem;
-      width: 3rem;
-    }
-
-  footer img{
-    width: 10vw;  
+    margin-top: 1rem;
+    width: 3rem;
   }
-  footer ul{
+
+  footer img {
+    width: 10vw;
+  }
+  footer ul {
     margin-left: -2.5rem;
   }
 }

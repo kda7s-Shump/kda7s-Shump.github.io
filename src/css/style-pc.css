@@ -2,17 +2,22 @@
   p {
     margin: 0 -1em;
   }
-    .font-S {
-        font-size: 1.2rem;
-    }
-    .font-M {
-        font-size: 3rem;
-        margin-left: 1em;
-    }
-    .font-L {
-        font-size: 6rem;
-        margin-bottom: 10%;
-    }
+  
+  .font-S {
+    font-size: 1.2rem;
+  }
+  .font-M {
+      font-size: 3rem;
+      margin-left: 1em;
+  }
+  .font-L {
+      font-size: 6rem;
+      margin-bottom: 10%;
+  }
+
+  #hamburger{
+    display: none;
+  }
     nav {
         align-items: center;
         background: rgba(255, 255, 255, 0.75);
